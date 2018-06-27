@@ -25,3 +25,11 @@ function factorialize(num) {
   return num;
 }
 console.log(`Factorization of 5: ${factorialize(5)}`);
+
+// ---- Find the Longest Word in a String ---- //
+
+function findLongestWordLength(str) {
+  str = str.split(' ').reduce((x, y) => x.length > y.length ? x : y);
+  return str.length;
+}
+console.log(`The Longest word has a length of ${findLongestWordLength("The quick brown fox jumped over the lazy dog")}`);
