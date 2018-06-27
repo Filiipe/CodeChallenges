@@ -33,3 +33,12 @@ function findLongestWordLength(str) {
   return str.length;
 }
 console.log(`The Longest word has a length of ${findLongestWordLength("The quick brown fox jumped over the lazy dog")}`);
+
+// ---- Return Largest Numbers in Arrays ---- //
+
+function largestOfFour(arr) {
+  arr = arr.map(sub => sub.reduce((x, y) => y > x ? y : x));
+  return arr;
+}
+
+console.log(`The largest number of four arrays: ${largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])}`);
