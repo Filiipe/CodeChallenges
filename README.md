@@ -1,3 +1,5 @@
 # Code Challenges
 
-My solutions to some challegens of [freecodecamp](https://www.freecodecamp.org/).
+Solutions to challenges of [FreeCodeCamp](https://www.freecodecamp.org/):
+
+1. [Basic Algorithm Scripting](https://github.com/Filiipe/CodeChallenges/tree/master/BasicAlgorithm)
