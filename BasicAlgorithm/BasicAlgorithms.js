@@ -61,7 +61,15 @@ console.log(`Repeating strings: ${repeatStringNumTimes("abc", 3)}`);
 // ----  Truncate a String ---- //
 
 function truncateString(str, num) {
-  return str.length > num ? str.slice(0, (num > str.length ? num - str.length : num)) + '...' : str; 
+  if(str.length > num)
+    return str.slice(0, (num > str.length ? num - str.length : num)) + '...';
+  return str;
 }
-
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+
+// ----  Finders Keepers ---- //
+function findElement(arr, func) {
+  arr = arr.filter(func);
+  return arr[0];
+}
+console.log(`Finders Keepers: ${findElement([1, 2, 3, 4], num => num % 2 === 0)}`);
