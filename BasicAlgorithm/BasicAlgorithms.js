@@ -92,3 +92,13 @@ function titleCase(str) {
   return str;
 }
 console.log(`Title Case a Sentence: ${titleCase("I'm a lIttle teA pot")}`); 
+
+// ---- Slice and Splice ---- //
+
+function frankenSplice(arr1, arr2, n) {
+  let copyArr = arr2.slice(0, arr2.length);
+  copyArr.splice(n,0, ...arr1);
+  return copyArr;
+}
+
+console.log(`Slice and Splice: [${frankenSplice([1, 2, 3], [4, 5, 6], 1)}]`);
