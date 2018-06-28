@@ -49,4 +49,11 @@ function confirmEnding(str, target) {
   const endOfWord = str.substr(str.length - target.length);
   return endOfWord === target;
 }
-confirmEnding("Bastian", "n");
+console.log(`Bastian ends with 'n'? ${confirmEnding("Bastian", "n")}`);
+
+// ----  Repeat a String Repeat a String ---- //
+
+function repeatStringNumTimes(str, num) {
+  return num < 0 ? '' : Array(num + 1).join(str);
+}
+console.log(`Repeating strings: ${repeatStringNumTimes("abc", 3)}`);
