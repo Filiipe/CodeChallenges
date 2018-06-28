@@ -57,3 +57,11 @@ function repeatStringNumTimes(str, num) {
   return num < 0 ? '' : Array(num + 1).join(str);
 }
 console.log(`Repeating strings: ${repeatStringNumTimes("abc", 3)}`);
+
+// ----  Truncate a String ---- //
+
+function truncateString(str, num) {
+  return str.length > num ? str.slice(0, (num > str.length ? num - str.length : num)) + '...' : str; 
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
