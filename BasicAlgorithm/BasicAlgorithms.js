@@ -83,3 +83,12 @@ function booWho(bool) {
   return false;
 }
 console.log(`Boo Who: ${booWho(1)}`);
+
+// ---- Title Case a Sentence ---- //
+
+function titleCase(str) {
+  str = str.toLowerCase().split(' ');
+  str = str.map(str => str.replace(str.charAt(0), str.charAt(0).toUpperCase())).join(' ');
+  return str;
+}
+console.log(`Title Case a Sentence: ${titleCase("I'm a lIttle teA pot")}`); 
