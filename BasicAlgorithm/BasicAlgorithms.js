@@ -68,8 +68,18 @@ function truncateString(str, num) {
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
 
 // ----  Finders Keepers ---- //
+
 function findElement(arr, func) {
   arr = arr.filter(func);
   return arr[0];
 }
 console.log(`Finders Keepers: ${findElement([1, 2, 3, 4], num => num % 2 === 0)}`);
+
+// ---- Boo who ---- //
+
+function booWho(bool) {
+  if(bool === true || bool === false)
+    return true;
+  return false;
+}
+console.log(`Boo Who: ${booWho(1)}`);
