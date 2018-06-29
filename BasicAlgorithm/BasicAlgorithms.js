@@ -61,7 +61,7 @@ console.log(`Repeating strings: ${repeatStringNumTimes("abc", 3)}`);
 // ----  Truncate a String ---- //
 
 function truncateString(str, num) {
-  if(str.length > num)
+  if (str.length > num)
     return str.slice(0, (num > str.length ? num - str.length : num)) + '...';
   return str;
 }
@@ -78,7 +78,7 @@ console.log(`Finders Keepers: ${findElement([1, 2, 3, 4], num => num % 2 === 0)}
 // ---- Boo who ---- //
 
 function booWho(bool) {
-  if(bool === true || bool === false)
+  if (bool === true || bool === false)
     return true;
   return false;
 }
@@ -91,25 +91,38 @@ function titleCase(str) {
   str = str.map(str => str.replace(str.charAt(0), str.charAt(0).toUpperCase())).join(' ');
   return str;
 }
-console.log(`Title Case a Sentence: ${titleCase("I'm a lIttle teA pot")}`); 
+console.log(`Title Case a Sentence: ${titleCase("I'm a lIttle teA pot")}`);
 
 // ---- Slice and Splice ---- //
 
 function frankenSplice(arr1, arr2, n) {
   let copyArr = arr2.slice(0, arr2.length);
-  copyArr.splice(n,0, ...arr1);
+  copyArr.splice(n, 0, ...arr1);
   return copyArr;
 }
 
 console.log(`Slice and Splice: [${frankenSplice([1, 2, 3], [4, 5, 6], 1)}]`);
 
 // ---- Falsy Bouncer ---- //
+
 function bouncer(arr) {
   let noFalsy = [];
   arr = arr.filter(arr => {
-    if (!!arr) 
+    if (!!arr)
       noFalsy.push(arr);
   });
   return noFalsy;
 }
-console.log(bouncer([7, "ate", "", false, 9]));
+console.log(`Falsy Bouncer: ${bouncer([7, "ate", "", false, 9])}`);
+
+// ---- Where do I Belong ---- //
+
+function getIndexToIns(arr, num) {
+  function sorting(x, y) {
+    return x - y;
+  }
+  arr.push(num);
+  arr.sort(sorting);
+  return arr.indexOf(num);
+}
+console.log(`Where do I Belong: ${getIndexToIns([10, 20, 30, 40, 50], 35)}`);
