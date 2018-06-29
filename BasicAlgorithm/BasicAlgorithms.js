@@ -132,10 +132,10 @@ console.log(`Where do I Belong: ${getIndexToIns([10, 20, 30, 40, 50], 35)}`);
 function mutation(arr) {
   arr = arr.join(' ').toLowerCase().split(' ');
   for(let i = 0; i < arr[1].length; i++) {
-    if(arr[0].indexOf(arr[1]) === -1)
+    if(arr[0].indexOf(arr[1][i]) === -1)
       return false;
   }
   return true;
 }
 
-console.log(`Mutations: ${mutation(["hello", "hey"])}`);
+console.log(`Mutations: ${mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])}`);
