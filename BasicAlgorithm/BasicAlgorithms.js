@@ -137,5 +137,17 @@ function mutation(arr) {
   }
   return true;
 }
-
 console.log(`Mutations: ${mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])}`);
+
+
+// ---- Chunky Monkey ---- //
+
+function chunkArrayInGroups(arr, size) {
+  let newChunky = [];
+  for(let i = 0; i < arr.length; i+=size){
+    newChunky.push(arr.slice(i, i+size));
+  }
+  return newChunky;
+}
+
+console.log(`Chunky Monkey: ${chunkArrayInGroups(["a", "b", "c", "d"], 2)}`);
